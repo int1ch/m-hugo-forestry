@@ -1,4 +1,10 @@
 baseURL = "/"
 languageCode = "ru-RU"
-theme = "tale-theme"
-title = "МикроКосмос"
+theme = "nofancy"
+title = "MicroSpace"
+
+[params]
+    topmenu="blog"
+
+[author]
+    name = "MIke NIkitin"
