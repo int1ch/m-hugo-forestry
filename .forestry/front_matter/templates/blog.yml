@@ -26,7 +26,7 @@ fields:
   name: type
   label: type
   default: blog
-  hidden: true
+  hidden: false
 - type: file
   name: hero
   label: Hero Image
