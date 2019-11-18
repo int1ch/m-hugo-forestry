@@ -31,9 +31,10 @@ fields:
   name: hero
   label: Hero Image
 pages:
-- content/blog-posts/Walking.md
-- content/blog-posts/geneology-of-morals.md
-- content/blog-posts/self-reliance.md
-- content/blog-posts/sunflower-sutra.md
-- content/blog-posts/Personal/wysiwyg-ide-for-development.md
+- content/blog-posts/golang-mysql-timezone.md
 - content/blog-posts/классификации-тепло-радиаторов.md
+- content/blog-posts/Personal/wysiwyg-ide-for-development.md
+- content/blog-posts/geneology-of-morals.md
+- content/blog-posts/Walking.md
+- content/blog-posts/sunflower-sutra.md
+- content/blog-posts/self-reliance.md
