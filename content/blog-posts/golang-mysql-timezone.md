@@ -1,7 +1,6 @@
 +++
 author = "Mk"
 date = 2019-11-06T21:00:00Z
-draft = true
 hero = ""
 title = "golang + mysql + timezone"
 type = "blog"
@@ -13,25 +12,25 @@ type = "blog"
 
 а для драйвера mysql добавляется опция подключения parseDate
 
-и все будет работать до тех пор пока не появяться временные зоны или поструюеться сделать операцию с unixtime (привет UTC)
+и все будет работать до тех пор пока не появяться временные зоны или не потребуется сделать операцию с unixtime (привет UTC)
 
-Если временная зона нужна - 
+поэтому Если временная зона нужна -
 
 alter table X modify Y timestamp()
 
-и в строчке подключения добавляются 2 таймзоны парсер и mysql
+и в строчке подключения драйвером добавляются 2 таймзоны: парсера и mysql
 
     parseTime=True
-
+    
     &loc=UTC
-
+    
     &time_zone=%27UTC%27
 
 loc для UTC можно опустить
 
 [https://github.com/go-sql-driver/mysql#system-variables](https://github.com/go-sql-driver/mysql#system-variables "https://github.com/go-sql-driver/mysql#system-variables")
 
-только предварительно знает ли база такую зону 
+но надо предварительно проверить знает ли база такую зону
 
     SET time_zone = 'UTC';
     ERROR 1298 (HY000): Unknown or incorrect time zone: 'UTC'
