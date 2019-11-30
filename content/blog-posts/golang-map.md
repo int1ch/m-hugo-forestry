@@ -14,5 +14,3 @@ dictionary := make(map\[string\]interface())
     _, ok1 := m["1"]
     v, ok3 := m["3"]
     fmt.Println("Hello, playground", m["1"], ok1, v, ok3)
-
-x
