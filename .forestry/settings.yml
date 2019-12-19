@@ -19,8 +19,6 @@ sections:
 - type: document
   path: content/about/policy.md
   label: Policy
-  match: "**/*"
-  read_only: false
 - type: document
   path: content/data/authors.yaml
   label: Authors List
