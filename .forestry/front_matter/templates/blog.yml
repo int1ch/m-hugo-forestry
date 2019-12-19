@@ -32,7 +32,6 @@ fields:
   label: Hero Image
 pages:
 - content/blog-posts/Personal/wysiwyg-ide-for-development.md
-- content/blog-posts/Walking.md
 - content/blog-posts/geneology-of-morals.md
 - content/blog-posts/golang-map.md
 - content/blog-posts/golang-mysql-timezone.md
