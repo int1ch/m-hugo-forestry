@@ -6,9 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: Content
-- type: document
-  path: content/about/info.md
-  label: Info Page
 - type: directory
   path: content/blog-posts
   label: Blog posts
@@ -16,6 +13,14 @@ sections:
   match: "**/*"
   templates:
   - blog
+- type: document
+  path: content/about/info.md
+  label: Info Page
+- type: document
+  path: content/about/policy.md
+  label: Policy
+  match: "**/*"
+  read_only: false
 - type: document
   path: content/data/authors.yaml
   label: Authors List
