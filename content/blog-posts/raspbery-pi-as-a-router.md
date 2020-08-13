@@ -12,7 +12,7 @@ type = "blog"
 в целом он все делает нормально, НО только в конфигурации которая задумана авторами, переконфигурация убивает ручные изменения в конфигах
 
 НО:  
-если название сетевого интерфейса eth0 то лучше его так и оставить, и не переключать через raspi-config: Enable predictable interface names 
+если название сетевого интерфейса eth0 то лучше его так и оставить, и не переключать через raspi-config: Enable predictable interface names
 
 сделать его непонятным можно, обратно вернуть сложно.
 
@@ -24,7 +24,7 @@ vim /etc/dhcpcd.conf
 
 настройки dhcp
 
-за это отвечает [dnsmasqurade](http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html) 
+за это отвечает [dnsmasqurade](http://www.thekelleys.org.uk/dnsmasq/docs/dnsmasq-man.html)
 
 sudo systemctl status dnsmasq.service  
 ps aux | grep dnsmasq  
@@ -52,7 +52,6 @@ cat /etc/dnsmasq.d/dhcp_options
     #
     dhcp-option=interface:wlan0,option:dns-server,192.168.90.1
     dhcp-option=option:domain-name,home
-    
 
 настройки роутинга и masquerade
 
@@ -70,7 +69,7 @@ route -n
     192.168.90.0    0.0.0.0         255.255.255.0   U     303    0        0 wlan0
     192.168.91.0    0.0.0.0         255.255.255.0   U     202    0        0 eth0
 
-те интернет на свистке работать не будет 
+те интернет на свистке работать не будет
 
 sudo vim /etc/dhcpcd.conf
 
@@ -81,9 +80,9 @@ sudo /etc/init.d/dhcpcd restart
 
 Routing
 
-предпологая что nft уже устновлен можно воспользоваеться [инструкцией](https://wiki.nftables.org/wiki-nftables/index.php/Performing_Network_Address_Translation_(NAT)) 
+предпологая что nft уже устновлен можно воспользоваеться [инструкцией](https://wiki.nftables.org/wiki-nftables/index.php/Performing_Network_Address_Translation_(NAT))
 
-    nft list ruleset
+    nft list ruleset -a
     nft add table nat
     nft 'add chain nat postrouting { type nat hook postrouting priority 100 ; }'
     nft add rule nat postrouting ip saddr 192.168.91.0/24 ip daddr != 192.168.91.0/24 masquerade
