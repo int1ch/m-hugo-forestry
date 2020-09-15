@@ -17,3 +17,13 @@ type = "blog"
 Flash mode : D3 -> GND
 
 Analog: A0 может измерять напряжение питания на 3V3 (ESP.getVcc() )
+
+Запрещенные пины Webmos при загрузке?
+
+D1(05) + HIGH = вырубает монитор
+
+D8 + HIGH = преключает в режим? Connecting to Host
+
+D3 + LOW = Flash mod
+
+D4(02) + LOW = ? Ломает монитор
