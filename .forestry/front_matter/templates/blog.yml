@@ -41,5 +41,6 @@ pages:
 - content/blog-posts/run-typescript-with-modules-as-script.md
 - content/blog-posts/typescript-types.md
 - content/blog-posts/vue-child-to-parent-communication.md
+- content/blog-posts/vue-make-property-reactive.md
 - content/blog-posts/классификации-тепло-радиаторов.md
 - content/blog-posts/транспонирование-таблички-с-данными-golang-mysql-json.md
