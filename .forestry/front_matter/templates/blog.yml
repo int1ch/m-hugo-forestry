@@ -32,6 +32,7 @@ fields:
   label: Hero Image
 pages:
 - content/blog-posts/Personal/wysiwyg-ide-for-development.md
+- content/blog-posts/eng-complete-guide-for-typescript-with-mongoose-for-node.js.md
 - content/blog-posts/esp8266-based-boards-cache.md
 - content/blog-posts/golang-map.md
 - content/blog-posts/golang-mysql-timezone.md
