@@ -1,6 +1,6 @@
 +++
 author = "Mk"
-date = ""
+date = 2020-10-10T21:00:00Z
 hero = ""
 title = "Vue make property reactive"
 type = "blog"
