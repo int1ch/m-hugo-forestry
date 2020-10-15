@@ -1,7 +1,6 @@
 +++
 author = "Mk"
-date = ""
-draft = true
+date = 2020-10-11T21:00:00Z
 hero = ""
 title = "Vue Child to Parent communication"
 type = "blog"
