@@ -1,7 +1,6 @@
 +++
 author = "Mk"
 date = ""
-draft = true
 hero = ""
 title = "Vue make property reactive"
 type = "blog"
@@ -11,11 +10,11 @@ type = "blog"
 
 итак vue делает реактивным (навешивает геттеры сеттеры) на все что он видит в момент старта объекта
 
-если b новый клюx то 
+если b новый ключ то
 
 vm.b = 2 // \`vm.b\` is NOT reactive
 
-аналогично 
+аналогично
 
     vm = new Vue({
       data: {
@@ -31,11 +30,11 @@ vm.b = 2 // \`vm.b\` is NOT reactive
     Vue.set(vm.a, 'new', {}) - внутренние свойства кстати не будут реактивным при добавлении
     Vue.set(vm.b, 'arr' []) - содержимое будет частично реактивно?
 
-для массива не работает   
+для массива не работает  
 vm.items\[indexOfItem\] = newValue  
 vm.items.length = newLength
 
-все остальные операции 
+все остальные операции
 
 .push .slice .splice работатют и информируют родителя об изменениях (//TESTME)
 
