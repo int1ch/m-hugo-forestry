@@ -3,7 +3,7 @@ author = ""
 date = ""
 draft = true
 hero = ""
-title = "Пролный гид по иcпользованию Typecscript c Mongoose для Node.js"
+title = "Полный гид по иcпользованию Typecscript c Mongoose для Node.js"
 type = "blog"
 
 +++
@@ -96,7 +96,7 @@ type = "blog"
 
 ## Typescript модный способ
 
-> **_TL;DR_** _Во полная рабочая версия на Typescript_
+> **_TL;DR_** _Вот полная рабочая версия на Typescript_
 
     import { Document, Model, model, Types, Schema, Query } from "mongoose"
     import { ICompany } from "./Company"
@@ -210,26 +210,34 @@ type = "blog"
 
 ## Schema and Document
 
-First, we create an interface named **IUserSchema** just to reflect the UserSchema we defined back in the javascript file. Notice two things:
+Для начала мы создаем интерфейс **IUserSchema**, но только для того что бы отразить схему которую сделали раньше в джаваскрипте. обратите внимание на две вещи
 
-* we have _IUserSchema_ extends _Document_ type from Mongoose
-* we don’t export it.
+* _IUserSchema расширяет Document моонгуста_
+* _IUserSchema не экспортируется_
 
 > _The reason to have IUserSchema extends Document is a personal preference which I will explain later. As for why we don’t export this schema, it will be more clear later on._
 
 Types and references
 
-## Subdocument
+## Вложенные документы
 
-Some schema may have nested document, the way how the interface for this nested document is defined is a little bit different from a top level schema. **The nested schema interface DOES NOT inherent from `Document` .**
+Некоторые схемы содержат в себе вложенные документы, и то как эти документы определяются чуть чуть отличаются  от того как задается схема верхнего уровня.
 
-The reason it is defined this way is because if the nested document inherent from `Document` . Then when you tried to create and object with nested fields like this
+Вложенные схемы **не** наследуються от **`Document`**
+
+А причина проста, если вложенная схема будет наследоваться от документа то при создании, typescript ругнеться что у вложенной схемы нет id.
+
+Пример:
 
     const user = await User.create({  ...  address: {    street: "some place",    zipcode: "94019",  },  ...});
 
-Typescript will complain that `user.address` is missing the following properties from type ‘{ id?: any; _id: any; errors: any; isNew: string | number | boolean …. Thus, we need to make sure to exclude the inheritance of `Document`.
+Ошибка:
 
-> _This is a relative hacky way for removing the type error, there is an issue regarding how to preserve some properties of Document while avoiding the error on Github:_ [_https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291_](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291 "https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291")_. They use some advanced types such as `Pick<Document, "toObject">`. I personally found this way impractical since it introduce more maintenance overhead. But feel free to use it as a reference if you need more strong typing on subdocuments._
+`user.address` is missing the following properties from type ‘{ id?: any; _id: any; errors: any; isNew: string | number | boolean ….
+
+Таким образом, наследовать вложенную схему от `Document, не надо.`
+
+Правда есть еще один способ убрать эту ошибку, но он довольно извращен :). На github есть задачка касающаяся того как сохранить нектотрые из свойств документа, и при этом избежать ошибки [_https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291_](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291 "https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291") _Они используют для этого специальные типы такие как `Pick<Document, "toObject">.`_` И мне кажется что такой способ не практичен так как требует больше подержки. Но вы вполне можете его попробовать если вам нужные более сильная типизация для вложенных документов`
 
 ## Types and references
 
