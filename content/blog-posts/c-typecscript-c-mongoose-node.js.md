@@ -177,7 +177,7 @@ type = "blog"
     }
     
     // Export this for strong typing
-    export interface IUser_populated extends IUserBase {
+    export interface IUserPopulated extends IUserBase {
       company: ICompany;
     }
     
@@ -212,12 +212,8 @@ type = "blog"
 
 Для начала мы создаем интерфейс **IUserSchema**, но только для того что бы отразить схему которую сделали раньше в джаваскрипте. обратите внимание на две вещи
 
-* _IUserSchema расширяет Document моонгуста_
+* _IUserSchema расширяет Mongoose.Document_
 * _IUserSchema не экспортируется_
-
-> _The reason to have IUserSchema extends Document is a personal preference which I will explain later. As for why we don’t export this schema, it will be more clear later on._
-
-Types and references
 
 ## Вложенные документы
 
@@ -237,15 +233,25 @@ Types and references
 
 Таким образом, наследовать вложенную схему от `Document, не надо.`
 
-Правда есть еще один способ убрать эту ошибку, но он довольно извращен :). На github есть задачка касающаяся того как сохранить нектотрые из свойств документа, и при этом избежать ошибки [_https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291_](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291 "https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291") _Они используют для этого специальные типы такие как `Pick<Document, "toObject">.`_` И мне кажется что такой способ не практичен так как требует больше подержки. Но вы вполне можете его попробовать если вам нужные более сильная типизация для вложенных документов`
+Правда есть еще один способ убрать эту ошибку, но он довольно извращен :). На github есть задачка касающаяся того как сохранить нектотрые из свойств документа, и при этом избежать ошибки [_https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291_](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291 "https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291") _Они используют для этого специальные типы такие как `Pick<Document, "toObject">.`_`И мне кажется что такой способ не практичен так как требует больше подержки. Но вы вполне можете его попробовать если вам нужные более сильная типизация для вложенных документов`
 
-## Types and references
+## Типы и ссылки
 
-> _Since company field is a reference, by default it should be a string type. However, there could be times when the instance is populated(when “joined” with company table) and this field becomes an object. Thus, we need 2 different interfaces to handle these situations. So we leave the company field out of the IUserSchema for now._
+> _Так как поле company это ссылка, то по умолчанию это должна быть строка. Тем не менее когда обьект заполняеться(populated)  это поле становиться обектом._
+>
+> _Таким образом нужно 2 разных интефейса что бы обрабатывать обе ситуации. Поэтому мы исключаем поле company из IUserSchema._
 
-For _company_ field, to handle the populated vs non-populated situations, we constructed one interface named **IUserbase** which extends _IUserSchema_ and two other interfaces **IUser** and **IUser_populated** that extend _IUserBase_. For **IUserbase**, we attach all the relevant methods and virtuals getters to it to make sure all the sub-interfaces (IUser and IUser_populated) have these properties defined. For **IUser**, we use type **ICompany\[“_id”\]** to indicates its value is an _object id_, here _ICompany_ would be the interface(type) of the other data model _Company_. For **IUser_populated**, we use type _ICompany_ to indicates its value is an instance of _Company_ data model. In this case, when we use the _IUser_populated_ model, we can call _user.company.name_ which won’t throw any error. **This is the way to reference other models with interfaces.**
+Что бы отразить поле _company_, для простых и заполненных(populated) ситуация мы интерфейс **IUserBase** котрый расширяет _IUserSchema_**,**  и **IUser  IUserPopulated** которые расширяют **IUserBase**
 
-> The reason that three layers IUser/IUser_populated -> IUserbase -> IUserSchema -> Mongoose.Document is because we have to deal with the populated vs non-populated situation. If the schema you defined doesn’t have a similar problem, all you need is two layers: IUser -> IUserSchema -> Mongoose.Document.
+К IUserBase мы цепляем все  методы, геттеры и все что не касаеться работы company
+
+В интерфейсе **IUser** мы используем тип **ICompany\[“_id”\]** что б обзначить что значение поле _object id,  Здесь ICompany это интерфейс другой модельки Company_
+
+Для  **IUserPopulated** _используем тип ICompany что бы показать что значение там объект Company. И когда мы будем использовать объект типа IUserPopulated мы сможем вызвать например user.company.name и это не будет_ _ошибкой._
+
+, we constructed one interface named **IUserbase** which extends _IUserSchema_ and two other interfaces **IUser** and **IUser_populated** that extend _IUserBase_. For **IUserbase**, we attach all the relevant methods and virtuals getters to it to make sure all the sub-interfaces (IUser and IUser_populated) have these properties defined. For **IUser**, we use type **ICompany\[“_id”\]** to indicates its value is an _object id_, here _ICompany_ would be the interface(type) of the other data model _Company_. For **IUser_populated**, we use type _ICompany_ to indicates its value is an instance of _Company_ data model. In this case, when we use the _IUser_populated_ model, we can call _user.company.name_ which won’t throw any error. **This is the way to reference other models with interfaces.**
+
+> Причина по которой у нас три слоя IUser/IUser_populated -> IUserbase -> IUserSchema -> Mongoose.Document -  потому что то мы хотим работать с populated и обычными моделями, Если в ваше модели в этом нет необходимости то вам достачтоно двух слоев вложенности  IUser -> IUserSchema -> Mongoose.Document
 
 For the _friends_ field, while we could use string\[\], here we used **Types.Array<string>** (Types imported from Mongoose). This is because by using the Mongoose provided type Array, we will be able to call some Mongoose specific methods on it such as _addToSet()_.
 
