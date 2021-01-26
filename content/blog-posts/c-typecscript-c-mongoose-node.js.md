@@ -7,14 +7,14 @@ title = "Полный гид по иcпользованию Typecscript c Mongoo
 type = "blog"
 
 +++
-это превод статьи  Хансена Ванга [Complete guide for Typescript with Mongoose for Node.js](https://medium.com/@agentwhs/complete-guide-for-typescript-for-mongoose-for-node-js-8cc0a7e470c1) отпубливанной на медиуме
+это перевод статьи  Хансена Ванга [Complete guide for Typescript with Mongoose for Node.js](https://medium.com/@agentwhs/complete-guide-for-typescript-for-mongoose-for-node-js-8cc0a7e470c1) опубликованной на медиуме
 
 [  
 ](https://medium.com/@agentwhs?source=post_page-----8cc0a7e470c1--------------------------------)  
 [Hansen Wang](https://medium.com/@agentwhs?source=post_page-----8cc0a7e470c1--------------------------------)
 
 Когда мы начали использовать Typescript внутри нашего отдела разработки в Goolooup, мы столкнулись с проблемами при использовании Typescript и Monngoose  
-Похоже что во всех остальных постах и интрукциях есть недостающие кусочки. И что бы использовать все возможность Typescript'а приходиться читать много блогово, и постов на StackOverflow что бы добыть релевантную информацию и заставить все это вместе работать. Чтобы помочь разработчиками столкнувшимися с подобными сложностями мы решили написать в этой статье от всех проблемах с которыми мы столкнулись и кончно же о том как решить их.  Поехали!
+Похоже что во всех остальных постах и инструкциях есть недостающие кусочки. И что бы использовать все возможность Typescript'а приходиться читать много блогов, и постов на StackOverflow что бы добыть релевантную информацию и заставить все это вместе работать. Чтобы помочь разработчиками столкнувшимися с подобными сложностями мы решили написать в этой статье от всех проблемах с которыми мы столкнулись и конечно же о том как решить их.  Поехали!
 
 !\[Image for post\]([https://miro.medium.com/max/60/0](https://miro.medium.com/max/60/0 "https://miro.medium.com/max/60/0")*h1ZU__SRcAgv1DPI?q=20 =625x458)
 
@@ -219,9 +219,9 @@ type = "blog"
 
 Некоторые схемы содержат в себе вложенные документы, и то как эти документы определяются чуть чуть отличаются  от того как задается схема верхнего уровня.
 
-Вложенные схемы **не** наследуються от **`Document`**
+Вложенные схемы **не** наследуются от **`Document`**
 
-А причина проста, если вложенная схема будет наследоваться от документа то при создании, typescript ругнеться что у вложенной схемы нет id.
+А причина проста, если вложенная схема будет наследоваться от документа то при создании, typescript ругнется что у вложенной схемы нет id.
 
 Пример:
 
@@ -233,7 +233,7 @@ type = "blog"
 
 Таким образом, наследовать вложенную схему от `Document, не надо.`
 
-Правда есть еще один способ убрать эту ошибку, но он довольно извращен :). На github есть задачка касающаяся того как сохранить нектотрые из свойств документа, и при этом избежать ошибки [_https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291_](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291 "https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291") _Они используют для этого специальные типы такие как `Pick<Document, "toObject">.`_`И мне кажется что такой способ не практичен так как требует больше подержки. Но вы вполне можете его попробовать если вам нужные более сильная типизация для вложенных документов`
+Правда есть еще один способ убрать эту ошибку, но он довольно извращен :). На github есть задачка касающаяся того как сохранить некотрые из свойств документа, и при этом избежать ошибки [_https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291_](https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291 "https://github.com/DefinitelyTyped/DefinitelyTyped/issues/11291") _Они используют для этого специальные типы такие как `Pick<Document, "toObject">.`_`И мне кажется что такой способ не практичен так как требует больше подержки. Но вы вполне можете его попробовать если вам нужные более сильная типизация для вложенных документов`
 
 ## Типы и ссылки
 
@@ -241,15 +241,15 @@ type = "blog"
 >
 > _Таким образом нужно 2 разных интефейса что бы обрабатывать обе ситуации. Поэтому мы исключаем поле company из IUserSchema._
 
-Что бы отразить поле _company_, для простых и заполненных(populated) ситуация мы интерфейс **IUserBase** котрый расширяет _IUserSchema_**,**  и **IUser  IUserPopulated** которые расширяют **IUserBase**
+Что бы отразить поле _company_, для простых и заполненных(populated) ситуация мы интерфейс **IUserBase** который расширяет _IUserSchema_**,**  и **IUser  IUserPopulated** которые расширяют **IUserBase**
 
-К IUserBase мы цепляем все  методы, геттеры и все что не касаеться работы company
+К IUserBase мы цепляем все  методы, геттеры и все что не касается работы company
 
-В интерфейсе **IUser** мы используем тип **ICompany\[“_id”\]** что б обзначить что значение поле _object id,  Здесь ICompany это интерфейс другой модельки Company_
+В интерфейсе **IUser** мы используем тип **ICompany\[“_id”\]** что б обозначить что значение поле _object id,  Здесь ICompany это интерфейс другой модельки Company_
 
 Для  **IUserPopulated** _используем тип ICompany что бы показать что значение там объект Company. И когда мы будем использовать объект типа IUserPopulated мы сможем вызвать например user.company.name и это не будет_ _ошибкой._
 
-, we constructed one interface named **IUserbase** which extends _IUserSchema_ and two other interfaces **IUser** and **IUser_populated** that extend _IUserBase_. For **IUserbase**, we attach all the relevant methods and virtuals getters to it to make sure all the sub-interfaces (IUser and IUser_populated) have these properties defined. For **IUser**, we use type **ICompany\[“_id”\]** to indicates its value is an _object id_, here _ICompany_ would be the interface(type) of the other data model _Company_. For **IUser_populated**, we use type _ICompany_ to indicates its value is an instance of _Company_ data model. In this case, when we use the _IUser_populated_ model, we can call _user.company.name_ which won’t throw any error. **This is the way to reference other models with interfaces.**
+**This is the way to reference other models with interfaces.**
 
 > Причина по которой у нас три слоя IUser/IUser_populated -> IUserbase -> IUserSchema -> Mongoose.Document -  потому что то мы хотим работать с populated и обычными моделями, Если в ваше модели в этом нет необходимости то вам достачтоно двух слоев вложенности  IUser -> IUserSchema -> Mongoose.Document
 
