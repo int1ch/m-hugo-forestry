@@ -16,13 +16,14 @@ vm.b = 2 // \`vm.b\` is NOT reactive
 
 аналогично
 
+    import Vue from 'vue';
     vm = new Vue({
       data: {
         a: { b: 1, c: 2 }
       }
-    })
-    vm.a.new = {} // new is NOT REACTIVE
-    vm.a.arr = [] // is not reactive
+    });
+    vm.a.new = {}; // a.new is NOT REACTIVE
+    vm.a.arr = []; // a.arr not reactive
 
 правильно
 
@@ -41,3 +42,7 @@ vm.items.length = newLength
 для замены:
 
 Vue.set(vm.b.arr, 1, 'new one')
+
+или что бы не подключать vue можно воспользоваться this.$set
+
+this.$set(this.someObject, 'b', 2)
