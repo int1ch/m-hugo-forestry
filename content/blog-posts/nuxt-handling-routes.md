@@ -1,6 +1,6 @@
 +++
-author = ""
-date = ""
+author = "Mk"
+date = 2021-03-12T21:00:00Z
 hero = ""
 title = "Nuxt handling * routes"
 type = "blog"
