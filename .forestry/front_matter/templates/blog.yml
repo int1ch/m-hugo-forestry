@@ -46,6 +46,7 @@ pages:
 - content/blog-posts/raspbery-pi-as-a-router.md
 - content/blog-posts/run-typescript-with-modules-as-script.md
 - content/blog-posts/tuya-interception.md
+- content/blog-posts/typeorm.md
 - content/blog-posts/typescript-hash-key-value-type-definition.md
 - content/blog-posts/typescript-types.md
 - content/blog-posts/vpn.md
