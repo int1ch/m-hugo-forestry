@@ -38,6 +38,7 @@ pages:
 - content/blog-posts/flexbox.md
 - content/blog-posts/golang-map.md
 - content/blog-posts/golang-mysql-timezone.md
+- content/blog-posts/micro-orm.md
 - content/blog-posts/nginx-proxy-pass.md
 - content/blog-posts/nuxt-handling-routes.md
 - content/blog-posts/nuxt.js-axios-cookbook.md
