@@ -28,9 +28,15 @@ error stack trace
 
 [v8 stack trace api ](https://v8.dev/docs/stack-trace-api)
 
+http server framework
+
 [fastify](https://www.fastify.io/ecosystem/) = lighten (then express) http server framework with tested [ecosystem](https://www.fastify.io/ecosystem/)
 
 fastify-auth = конвейеры для реализации авторизации, авторизации не включены
+
+expressjs
+
+nestJs = модный модульный фрэймворк (пока кажется очень не стабильным, например ошибки компиляции зависимостей, дезинформируют) 
 
 SQL
 
@@ -55,4 +61,20 @@ tarn = resorce pool (knex dpendend on it)
 
 axios = fetcher
 
-[grant](https://github.com/simov/grant) = working oauth authorizer ()
+[grant](https://github.com/simov/grant) = working oauth2 authorizer ()
+
+[joi](https://github.com/sideway/joi) = validation (need [investigation](https://dev.to/olufemi/validation-joi-brings-you-joy-fof))
+
+dotenv
+
+[rxJs](https://rxjs.dev/guide/) ?
+
+[rimraf](https://github.com/isaacs/rimraf) = directory cleaner
+
+[bull]() = redis based queue (production problems?)
+
+typescript 
+
+ts-node = 
+
+ts-node/register
