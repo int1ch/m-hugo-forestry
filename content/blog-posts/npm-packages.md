@@ -7,10 +7,31 @@ title = "npm packages"
 type = "blog"
 
 +++
-pino = for fast json logs
+
+LOGS
+
+loggers:
+
+pino = far fast json logs
 
 winston = for slowly write logs, may be pino is better?
+
+console.log = default
+
+external log srvices:
+
+[Sentry](https://sentry.io/pricing/) = ?
+
+[Elastic search + kibana](https://www.elastic.co/downloads/) = !
 
 fastify = lighten (then express) http server framework with tested ecosystem
 
 fastify-auth = конвейеры для реализации авторизации, авторизации не включены
+
+SQL 
+
+knex = query builder with sql schema deployer
+
+typeorm = sql orm working
+
+microorm = sql orm, i got problems with understanding documentation
