@@ -24,6 +24,10 @@ external log srvices:
 
 [Elastic search + kibana](https://www.elastic.co/downloads/) = !
 
+[logFlare](https://logflare.app/pricing#backend)
+
+[logDNA](https://www.logdna.com/)
+
 fastify = lighten (then express) http server framework with tested ecosystem
 
 fastify-auth = конвейеры для реализации авторизации, авторизации не включены
@@ -35,3 +39,16 @@ knex = query builder with sql schema deployer
 typeorm = sql orm working
 
 microorm = sql orm, i got problems with understanding documentation
+
+TESTING
+
+[rewire](https://github.com/jhnns/rewire) - mock non public functions
+
+frameworks (similr)
+
+* jest + jest-ts
+* mocha
+
+Other
+
+tarn = resorce pool (knex dpendend on it)
