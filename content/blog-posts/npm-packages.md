@@ -26,6 +26,8 @@ error stack trace
 
 [longjohn](https://github.com/mattinsler/longjohn) = longer and better stack trace ([reference long-stack-traces]())
 
+node-stack-trace
+
 [v8 stack trace api ](https://v8.dev/docs/stack-trace-api)
 
 http server framework
@@ -72,6 +74,8 @@ dotenv
 [rimraf](https://github.com/isaacs/rimraf) = directory cleaner
 
 [bull]() = redis based queue (production problems?)
+
+[morgan]() = http access logs middlware
 
 typescript 
 
