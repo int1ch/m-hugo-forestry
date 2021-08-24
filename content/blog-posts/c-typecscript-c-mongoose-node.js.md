@@ -1,13 +1,12 @@
 +++
-author = ""
-date = ""
-draft = true
+author = "Mk"
+date = 2020-12-31T21:00:00Z
 hero = ""
 title = "Полный гид по иcпользованию Typecscript c Mongoose для Node.js"
 type = "blog"
 
 +++
-это перевод статьи  Хансена Ванга [Complete guide for Typescript with Mongoose for Node.js](https://medium.com/@agentwhs/complete-guide-for-typescript-for-mongoose-for-node-js-8cc0a7e470c1) опубликованной на медиуме
+это незаконченный перевод перевод статьи  Хансена Ванга [Complete guide for Typescript with Mongoose for Node.js](https://medium.com/@agentwhs/complete-guide-for-typescript-for-mongoose-for-node-js-8cc0a7e470c1) опубликованной на медиуме
 
 [  
 ](https://medium.com/@agentwhs?source=post_page-----8cc0a7e470c1--------------------------------)  
