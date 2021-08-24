@@ -1,7 +1,6 @@
 +++
 author = ""
 date = ""
-draft = true
 hero = ""
 title = "npm packages"
 type = "blog"
