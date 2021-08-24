@@ -1,7 +1,6 @@
 +++
 author = "Mk"
-date = ""
-draft = true
+date = 2020-08-01T21:00:00Z
 hero = ""
 title = "VPN"
 type = "blog"
