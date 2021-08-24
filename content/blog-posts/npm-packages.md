@@ -24,6 +24,10 @@ type = "blog"
 
 ### error stack trace
 
+при использовании async / await стэк трейсы практически бесполезны, так как ошибки чаще возникают в сторонних модулях, а все что происходит после await редко соединено с основным стеком вызова
+
+поэтому самое простое - перехват ошибки 
+
 [longjohn](https://github.com/mattinsler/longjohn) = longer and better stack trace ([reference long-stack-traces]())
 
 node-stack-trace
