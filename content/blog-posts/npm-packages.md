@@ -9,6 +9,8 @@ type = "blog"
 +++
 # LOGS
 
+[debug](https://www.npmjs.com/package/debug) = logger.error helper
+
 ### loggers
 
 * pino = far fast json logs
