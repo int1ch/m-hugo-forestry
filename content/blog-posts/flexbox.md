@@ -1,9 +1,8 @@
 +++
 author = "Mk"
-date = ""
-draft = true
+date = 2001-03-31T20:00:00Z
 hero = ""
-title = "Выравниевание Элементов формы с помошью flexbox"
+title = "Выравнивание Элементов формы с помощью flexbox"
 type = "link"
 
 +++
