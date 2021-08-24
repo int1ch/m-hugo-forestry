@@ -1,7 +1,6 @@
 +++
 author = "Mk"
-date = ""
-draft = true
+date = 2020-07-31T21:00:00Z
 hero = ""
 title = "Raspbery pi as a router"
 type = "blog"
