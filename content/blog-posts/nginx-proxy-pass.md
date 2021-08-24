@@ -1,7 +1,6 @@
 +++
 author = "Mk"
-date = ""
-draft = true
+date = 2020-08-02T21:00:00Z
 hero = ""
 title = "Nginx Proxy Pass"
 type = "blog"
