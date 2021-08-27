@@ -27,7 +27,7 @@ type = "blog"
 
 при использовании async / await стэк трейсы практически бесполезны, так как ошибки чаще возникают в сторонних модулях, а все что происходит после await редко соединено с основным стеком вызова
 
-поэтому самое простое - перехват ошибки 
+поэтому самое простое - перехват ошибки
 
 [longjohn](https://github.com/mattinsler/longjohn) = longer and better stack trace ([reference long-stack-traces]())
 
@@ -43,18 +43,18 @@ fastify-auth = конвейеры для реализации авторизац
 
 expressjs
 
-nestJs = модный модульный фрэймворк (пока кажется очень не стабильным, например ошибки компиляции зависимостей, дезинформируют) 
+nestJs = модный модульный фрэймворк (пока кажется очень не стабильным, например ошибки компиляции зависимостей, дезинформируют)
 
 # SQL
 
 knex = query builder with sql schema deployer
 
-* [knex-stringcase](https://github.com/Kequc/knex-stringcase) = помощь в преобразований 
+* [knex-stringcase](https://github.com/Kequc/knex-stringcase) = помощь в преобразований
 
-typeorm = sql orm working, из недостатков, 
+typeorm = sql orm working, из недостатков,
 
 * медленный старт, компиляция схем - 3-4 секунды всегда,
-* при автоматическом создании название полей и столбцов postgress не совместимы, - требуют использование 
+* при автоматическом создании название полей и столбцов postgress не совместимы, - требуют использование
 
 microorm = sql orm, документация непонятнее чем typeorm
 
@@ -62,7 +62,7 @@ microorm = sql orm, документация непонятнее чем typeorm
 
 [rewire](https://github.com/jhnns/rewire) - mock non public functions
 
-testing frameworks в целом очень плохожи, 
+testing frameworks в целом очень плохожи,
 
 * jest + jest-ts
 * mocha
@@ -91,8 +91,10 @@ dotenv
 
 [uuid](https://www.npmjs.com/package/uuid) = uuid generator
 
-typescript 
+typescript
 
-ts-node = 
+ts-node =
 
 ts-node/register
+
+[bcryptjs](https://www.npmjs.com/package/bcryptjs) = for hashing passwords
