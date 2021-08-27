@@ -1,6 +1,6 @@
 +++
 author = ""
-date = ""
+date = 2021-08-23T21:00:00Z
 hero = ""
 title = "npm packages"
 type = "blog"
@@ -98,3 +98,9 @@ ts-node =
 ts-node/register
 
 [bcryptjs](https://www.npmjs.com/package/bcryptjs) = for hashing passwords
+
+FORM Validation
+
+[vee-validate](https://vee-validate.logaretm.com/v3/guide/basics.html) = для vue + vuetify client-side, позволяет батчем получать ошибки с сервера, и вставлять стандарые места v-input
+
+[validate.js]() = для серверной валидации
