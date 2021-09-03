@@ -45,11 +45,14 @@ expressjs
 
 nestJs = модный модульный фрэймворк (пока кажется очень не стабильным, например ошибки компиляции зависимостей, дезинформируют)
 
+[blitz.js](https://blitzjs.com/docs/get-started) React full stack
+
 # SQL
 
 knex = query builder with sql schema deployer
 
 * [knex-stringcase](https://github.com/Kequc/knex-stringcase) = помощь в преобразований
+* [cheatsheet](https://devhints.io/knex)
 
 typeorm = sql orm working, из недостатков,
 
@@ -99,8 +102,16 @@ ts-node/register
 
 [bcryptjs](https://www.npmjs.com/package/bcryptjs) = for hashing passwords
 
-FORM Validation
+## TEMPLATERS
 
-[vee-validate](https://vee-validate.logaretm.com/v3/guide/basics.html) = для vue + vuetify client-side, позволяет батчем получать ошибки с сервера, и вставлять стандарые места v-input
+[dustjs](http://www.dustjs.com/) = templater,  простой шаблонизатор, с глобальными контекстом в шаблонах, и блокам, однако vue slots не достижимы (или не понятно как )
 
-[validate.js]() = для серверной валидации
+[vue+ssr](https://ssr.vuejs.org/) = templater НЕ рекомендуеться в качестве отдельно стоящего шаблонизатора, сложно конфигуривать webpack, не удалось добиться  прямой передачи данных в new Vue({data:{}}) для bundleRenderer, возможно проще использовать готовые  примеры с передачей данных через vuex
+
+## FORM Validation
+
+[vee-validate](https://vee-validate.logaretm.com/v3/guide/basics.html) = для vue + vuetify client-side, позволяет пачкой получать ошибки с сервера, и вставлять стандарые места v-input
+
+[validate.js]() = для серверной валидации (совместим с vee-validate)
+
+ 
