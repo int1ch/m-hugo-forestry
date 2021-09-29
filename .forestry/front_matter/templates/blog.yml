@@ -53,6 +53,7 @@ pages:
 - content/blog-posts/typeorm-tostr.md
 - content/blog-posts/typeorm.md
 - content/blog-posts/typescript-hash-key-value-type-definition.md
+- content/blog-posts/typescript-typed-get-set.md
 - content/blog-posts/typescript-types.md
 - content/blog-posts/vpn.md
 - content/blog-posts/vue-child-to-parent-communication.md
