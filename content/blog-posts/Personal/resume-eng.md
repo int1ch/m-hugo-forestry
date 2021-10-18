@@ -1,21 +1,18 @@
 +++
 author = "Mk"
-date = ""
-draft = true
+date = 2021-10-17T21:00:00Z
 hero = ""
 title = "Resume Eng"
 type = "blog"
 
 +++
-**Mike Nikitin**
+# **Mike Nikitin**
 
 Node.js / Full Stack Developer
 
-Email: [mike@mellior.ru](mailto:mike@mellior.ru)
-
-Phone: +7 (926) 5573110
-
-City: Moscow, Russia****
+Email: [mike@mellior.ru](mailto:mike@mellior.ru)  
+Phone: +7 (926) 5573110  
+City: Moscow, Russia
 
 ### **Profile**
 
@@ -27,15 +24,12 @@ Used to make things, I am responsible for, work.
 
 ### **Technology Stack**
 
-Typescript/node.js, Perl
+Typescript + node.js, Perl  
+SQL(postgres mysql) Nosql memchaed  
+Vue.js  
+Docker 
 
-SQL(postgres mysql) Nosql memchae
-
-Vue.js
-
-Docker ****
-
-### **Work experience**
+## **Work experience**
 
 ### **TradeXFactor startup MVP**
 
@@ -49,7 +43,7 @@ Stack: NuxtJs(vue.js) typescript/node.js mongoDB
 
 October 2020 — January 2021
 
-Stack: perl postgres,nosql: octopus
+Stack: perl postgres, nosql: octopus
 
 Boom music app project: developing recommendation system
 
@@ -84,6 +78,6 @@ Micro Language system for ticket filtering / routing
 
 multi domain authorization
 
-### **Education**
+## **Education**
 
 The Moscow Institute of Physics and Technology: Magistr of applied mathematics and physics, (finished in 2006)
