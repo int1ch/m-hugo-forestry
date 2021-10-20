@@ -5,8 +5,10 @@ draft = true
 hero = ""
 title = "Run typescript with modules as script"
 type = "blog"
+tags = ["typescript", "node.js"]
 
 +++
+
 npx ts-node -s ./scripts/config-read.ts
 
 Cannot use import statement outside a module

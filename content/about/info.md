@@ -8,7 +8,9 @@ contact_info:
   email: info@forestry.io
   twitter_url: https://twitter.com/forestryio
   github_url: https://github.com/forestryio
-type: ''
-
+type: ""
 ---
-Это эксперимент \[как и все вокруг\] по эксплуатции [hugo]() c CSM на базе [Forestry](https://forestry.io/ "Forestry.io").io 
+
+Это эксперимент \[как и все вокруг\] по эксплуатции [hugo]() c CSM на базе [Forestry](https://forestry.io/ "Forestry.io").io
+
+[Resume](/about/resume/)

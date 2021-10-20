@@ -4,8 +4,10 @@ date = 2019-11-06T21:00:00Z
 hero = ""
 title = "golang + mysql + timezone"
 type = "blog"
+tags = ["golang"]
 
 +++
+
 Можно сделать два подхода при работе с датой и временем
 
 простой: игнорировать временную зону и хранить все как пойдет для этого в mysql есть тип datetime
@@ -21,9 +23,9 @@ alter table X modify Y timestamp()
 и в строчке подключения драйвером добавляются две таймзоны: одна парсера другая для сессии в mysql
 
     parseTime=True
-    
+
     &loc=UTC
-    
+
     &time_zone=%27UTC%27
 
 loc для UTC можно опустить

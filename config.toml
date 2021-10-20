@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "ru-RU"
-theme = "nofancy"
+theme = "mk"
 title = "MicroSpace"
 
 [params]
@@ -8,3 +8,13 @@ title = "MicroSpace"
 
 [author]
     name = "MIke NIkitin"
+    email = "mike@mellior.ru"
+
+[build]
+  writeStats = true
+
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+

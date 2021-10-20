@@ -1,0 +1,17 @@
+{{ partial "header.html" . }}
+
+<body class="bg-gray-300">
+<div class="md:container mx-auto border-black border-l bg-gray-50">
+    {{ partial "navbar.html" . }}
+
+
+
+
+    {{ block "main" . }}
+    {{ end }}
+    
+
+    {{ partial "footer.html" . }}
+</div><!-- end of container -->
+
+{{ partial "ender.html" . }}

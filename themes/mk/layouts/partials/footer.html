@@ -1,0 +1,15 @@
+<div class="footer container border-t border-black">
+  <div class="footer-content">
+    <div class="flex flex-row">
+      <div>
+      <a href="#" id="gototop-btn">↑↑</a>
+      </div><div class="flex-grow"></div>
+      <div>
+      <a href="#" class="">↑↑</a>
+      </div>
+    </div>
+    {{ if .Site.Copyright }}
+    <p id="foot-copyright">{{ .Site.Copyright | safeHTML }}</p>
+    {{ end }}
+  </div>
+</div>

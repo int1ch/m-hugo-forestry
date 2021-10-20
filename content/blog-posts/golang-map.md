@@ -5,8 +5,10 @@ draft = true
 hero = ""
 title = "golang map "
 type = "blog"
+tags = ["golang"]
 
 +++
+
 dictionary := make(map\[string\]interface())
 
     m := make(map[string]int64)

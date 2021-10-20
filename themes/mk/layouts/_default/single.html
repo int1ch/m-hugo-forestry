@@ -1,6 +1,7 @@
 {{ define "main" }}
-        <div class="post">
+        <div class="post post-content p-5 ">
             <div class="post-title">
+                <h1>{{ if .Draft }}DRAFT: {{end}}{{ .Title }}</h1>
                 <p class="footnote">
                     <time class="">{{ .Date.Format "2006-01-02" }}</time>
 		            {{ $baseurl := .Site.BaseURL }}
@@ -8,7 +9,7 @@
                     |
                     {{ end }}
                     {{ if isset .Params "tags" }}
-                    tags:{{ range .Params.tags }}<a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a> {{ end }}
+                    tags:{{ range .Params.tags }}[<a href="{{ $baseurl }}tags/{{ . | urlize }}">{{ . }}</a>] {{ end }}
                     {{ end }}
 
                     {{ if isset .Params "categories" }}
@@ -19,10 +20,10 @@
                     series:{{ range .Params.series }}<a href="{{ $baseurl }}series/{{ . | urlize }}">{{ . }}</a> {{ end }}
                     {{ end }}
                 </p>
-                <h1>{{ if .Draft }}DRAFT: {{end}}{{ .Title }}</h1>
+                
             </div>
 
-            <div class="post-content">
+            <div class="post-content mt-4">
                 {{ .Content }}
             </div>
         </div>

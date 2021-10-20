@@ -5,8 +5,10 @@ draft = true
 hero = ""
 title = "Nuxt.js + axios cookbook"
 type = "blog"
+tags = ['vue.js', 'nuxt']
 
 +++
+
 типа официальная документация [https://axios.nuxtjs.org/](https://axios.nuxtjs.org/ "https://axios.nuxtjs.org/") но она гавно если у вас старая версия Nuxt
 
 axios на nuxt v2.10 совершенно не хотел делать запросы на сторонний api сервер v2.14.7 уже норм
@@ -77,7 +79,7 @@ cat \~/plugins/axios
         console.log(config);
         console.log('AXIOS request to ' + config.baseURL + config.url);
       });
-    
+
       $axios.onError(error => {
         console.log(
           'Axious Error:',

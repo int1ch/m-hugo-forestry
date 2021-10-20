@@ -1,6 +1,7 @@
 {{ define "main" }}
-    <p class="posts-name">{{ .Title }}:</p>
-	<div class="post-content">
+    
+	<div class="post-content p-5">
+		<p class="posts-name">{{ .Title }}: </p>
 		<ul class="posts">
 		{{ $data := .Data }}
 		{{ range $key, $value := .Data.Terms.ByCount }}

@@ -1,0 +1,33 @@
+{{ partial "header.html" . }}
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;500;600&display=swap" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;400;500&text=Mike+NtnodSacDvprFuljs%2F&display=swap" rel="stylesheet">
+
+<style>
+#developer_name {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 100;
+        font-size: 40pt;
+        line-height: 40pt;
+        margin-left: -3pt;
+}  
+#developer_pos {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 200;
+}   
+.resume h1 { }   
+</style>
+
+</head>
+<body class="bg-gray-300">
+<div class="md:container mx-auto border-black border-l bg-gray-50">
+
+{{ block "main" . }}
+{{ end }}
+
+</div><!-- end of container -->
+
+{{ partial "ender.html" . }}

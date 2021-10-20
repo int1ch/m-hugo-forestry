@@ -4,6 +4,7 @@ date = 2020-10-10T21:00:00Z
 hero = ""
 title = "Vue make property reactive"
 type = "blog"
+tags = ["vue.js"]
 
 +++
 Вводная статья [на русском]() [на английском](https://vuejs.org/v2/guide/reactivity.html)

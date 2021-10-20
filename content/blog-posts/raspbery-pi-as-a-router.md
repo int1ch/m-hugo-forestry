@@ -4,14 +4,16 @@ date = 2020-07-31T21:00:00Z
 hero = ""
 title = "Raspbery pi as a router"
 type = "blog"
+tags = ['home']
 
 +++
+
 нерешенные проблемы:
 
 лимит подключенных устройств - 16, место где это задаеться пока не найдено.  
 И что хуже при количестве устройств близкому к максимальному hostapd(?) может падать, и тормозить при остановки поднятие службы, анонс сети при этом идет
 
-***
+---
 
 для того что бы раздавать интернет удобно воспользоваться [https://raspap.com/](https://raspap.com/ "https://raspap.com/") который поднимаеться на 80 порту
 
@@ -26,7 +28,7 @@ type = "blog"
 
 vim /etc/dhcpcd.conf
 
-НО: vim  /etc/network/interfaces.d/ не работает
+НО: vim /etc/network/interfaces.d/ не работает
 
 настройки dhcp
 
@@ -36,7 +38,7 @@ sudo systemctl status dnsmasq.service
 ps aux | grep dnsmasq  
 dnsmasq -7 /etc/dnsmasq.d --test
 
-НО:  RaspAP оставляет конфиги в /etc/dnsmasq.conf, в отдельной дириктории удобнее
+НО: RaspAP оставляет конфиги в /etc/dnsmasq.conf, в отдельной дириктории удобнее
 
 НО конфиг для dhcp для двух сетей
 
@@ -49,7 +51,7 @@ cat /etc/dnsmasq.d/dhcp_options
     #ROUTER
     dhcp-option=interface:eth0,option:dns-server,192.168.91.1
     dhcp-option=option:domain-name,home
-    
+
     interface=wlan0
     dhcp-range=interface:wlan0,192.168.90.10,192.168.90.200,255.255.255.0,1h
     dhcp-option=1,255.255.255.0
@@ -86,7 +88,7 @@ sudo /etc/init.d/dhcpcd restart
 
 Routing
 
-предпологая что nft уже устновлен можно воспользоваеться [инструкцией](https://wiki.nftables.org/wiki-nftables/index.php/Performing_Network_Address_Translation_(NAT))
+предпологая что nft уже устновлен можно воспользоваеться [инструкцией](<https://wiki.nftables.org/wiki-nftables/index.php/Performing_Network_Address_Translation_(NAT)>)
 
     nft list ruleset -a
     nft add table nat

@@ -4,8 +4,10 @@ date = 2019-12-18T21:00:00Z
 hero = ""
 title = "ESP8266 based boards cache"
 type = "blog"
+tags = ['home', 'esp8266']
 
 +++
+
 ### NodeMCU v3
 
 ![](/images/esp_layout.png)

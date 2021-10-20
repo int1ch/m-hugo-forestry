@@ -4,24 +4,25 @@ date = 2021-08-23T21:00:00Z
 hero = ""
 title = "npm packages"
 type = "blog"
-
+tags = ["node.js", "typescript"]
 +++
+
 # LOGS
 
 [debug](https://www.npmjs.com/package/debug) = logger.error helper
 
 ### loggers
 
-* pino = far fast json logs
-* winston = for slowly write logs, may be pino is better?
-* console.log = default
+- pino = far fast json logs
+- winston = for slowly write logs, may be pino is better?
+- console.log = default
 
 ### external log services
 
-* [Sentry](https://sentry.io/pricing/) = ?
-* [Elastic search + kibana](https://www.elastic.co/downloads/) = !
-* [logFlare](https://logflare.app/pricing#backend)
-* [logDNA](https://www.logdna.com/)
+- [Sentry](https://sentry.io/pricing/) = ?
+- [Elastic search + kibana](https://www.elastic.co/downloads/) = !
+- [logFlare](https://logflare.app/pricing#backend)
+- [logDNA](https://www.logdna.com/)
 
 ### error stack trace
 
@@ -51,13 +52,13 @@ nestJs = модный модульный фрэймворк (пока кажет
 
 knex = query builder with sql schema deployer
 
-* [knex-stringcase](https://github.com/Kequc/knex-stringcase) = помощь в преобразований
-* [cheatsheet](https://devhints.io/knex)
+- [knex-stringcase](https://github.com/Kequc/knex-stringcase) = помощь в преобразований
+- [cheatsheet](https://devhints.io/knex)
 
 typeorm = sql orm working, из недостатков,
 
-* медленный старт, компиляция схем - 3-4 секунды всегда,
-* при автоматическом создании название полей и столбцов postgress не совместимы, - требуют использование
+- медленный старт, компиляция схем - 3-4 секунды всегда,
+- при автоматическом создании название полей и столбцов postgress не совместимы, - требуют использование
 
 microorm = sql orm, документация непонятнее чем typeorm
 
@@ -67,8 +68,8 @@ microorm = sql orm, документация непонятнее чем typeorm
 
 testing frameworks в целом очень плохожи,
 
-* jest + jest-ts
-* mocha
+- jest + jest-ts
+- mocha
 
 # Other
 
@@ -104,14 +105,12 @@ ts-node/register
 
 ## TEMPLATERS
 
-[dustjs](http://www.dustjs.com/) = templater,  простой шаблонизатор, с глобальными контекстом в шаблонах, и блокам, однако vue slots не достижимы (или не понятно как )
+[dustjs](http://www.dustjs.com/) = templater, простой шаблонизатор, с глобальными контекстом в шаблонах, и блокам, однако vue slots не достижимы (или не понятно как )
 
-[vue+ssr](https://ssr.vuejs.org/) = templater НЕ рекомендуеться в качестве отдельно стоящего шаблонизатора, сложно конфигуривать webpack, не удалось добиться  прямой передачи данных в new Vue({data:{}}) для bundleRenderer, возможно проще использовать готовые  примеры с передачей данных через vuex
+[vue+ssr](https://ssr.vuejs.org/) = templater НЕ рекомендуеться в качестве отдельно стоящего шаблонизатора, сложно конфигуривать webpack, не удалось добиться прямой передачи данных в new Vue({data:{}}) для bundleRenderer, возможно проще использовать готовые примеры с передачей данных через vuex
 
 ## FORM Validation
 
 [vee-validate](https://vee-validate.logaretm.com/v3/guide/basics.html) = для vue + vuetify client-side, позволяет пачкой получать ошибки с сервера, и вставлять стандарые места v-input
 
 [validate.js]() = для серверной валидации (совместим с vee-validate)
-
- 

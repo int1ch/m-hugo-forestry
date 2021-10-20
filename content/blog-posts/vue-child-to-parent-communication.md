@@ -4,15 +4,17 @@ date = 2020-10-11T21:00:00Z
 hero = ""
 title = "Vue Child to Parent communication"
 type = "blog"
+tags = ["vue.js"]
 
 +++
-для начала можно взять рабочий пример который работает  на Javascript [https://vegibit.com/vuejs-parent-child-communication/](https://vegibit.com/vuejs-parent-child-communication/ "https://vegibit.com/vuejs-parent-child-communication/")
 
-и документацию [на английском](https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events)  или [на русском](https://ru.vuejs.org/v2/guide/components.html#Прослушивание-событий-из-дочерних-компонентов-в-родительских-компонентах)
+для начала можно взять рабочий пример который работает на Javascript [https://vegibit.com/vuejs-parent-child-communication/](https://vegibit.com/vuejs-parent-child-communication/ "https://vegibit.com/vuejs-parent-child-communication/")
+
+и документацию [на английском](https://vuejs.org/v2/guide/components.html#Listening-to-Child-Components-Events) или [на русском](https://ru.vuejs.org/v2/guide/components.html#Прослушивание-событий-из-дочерних-компонентов-в-родительских-компонентах)
 
 а теперь перенесем обработчик на уровень выше в рамках DOM
 
-    <div class="card-body" @finished="finished"> 
+    <div class="card-body" @finished="finished">
     ...
     	<child-card :parentmessage="parentmessage"></child-card>
 

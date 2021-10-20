@@ -1,6 +1,8 @@
-+++
+---
+title: Polycy for facebook
+date: 2020-07-06T20:13:19.000+00:00
+---
 
-+++
 Privacy Policy for dev.mellior.ru
 
 At Mellior devzone, accessible from dev.mellior.ru, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Mellior devzone and how we use it.
