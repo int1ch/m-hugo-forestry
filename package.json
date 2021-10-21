@@ -4,6 +4,7 @@
     "install": "^0.13.0",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",
+    "purgecss": "^4.0.3",
     "tailwindcss": "^2.2.17"
   }
 }
