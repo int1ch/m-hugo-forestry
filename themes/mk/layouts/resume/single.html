@@ -1,8 +1,8 @@
 {{ define "main" }}
-<div class="container px-5 grid grid-cols-4 resume gap-4">
+<div class="container px-5  resume ">
   <!-- Row 1-->
 
-  <div class="col-span-4">
+  <div class="">
     <div id="developer_name" class="text-3xl">{{ .Params.developer_name }}</div>
     <div id="developer_pos" class="text-xl">{{ .Params.developer_position }}</div>
   </div>
@@ -10,44 +10,40 @@
 
 
   <!-- row 2 -->
+  <div class="grid grid-cols-1 sm:grid-cols-4 sm:gap-4">
 
-  <div class="col-span-3 resume-content ">{{ .Content }}</div>
-
-  <div class="col-span-1 side">
-
- 
-      {{ if .Params.contacts_show }}
-      <h2>Contacts</h2>
-      <dl class="grid grid-cols-3">
-        {{ if .Params.contacts_email }}
-        <dt>mail</dt>
-        <dd class="col-span-2"><a href="mailto:{{ .Params.contacts_email }}">
-          {{ .Params.contacts_email }}</a></dd>
-        {{ end }} {{ if .Params.contacts_phone }}
-  
-        <dt>tel</dt>
-        <dd class="col-span-2"><a href="tel:{{ .Params.contacts_phone }}">{{ .Params.contacts_phone }}</a></dd>
-        {{ end }} 
-        {{ if .Params.contacts_city }}
-        <dt>city</dt>
-        <dd class="col-span-2">{{ .Params.contacts_city }}</dd>
-        {{ end }}
-      </dl>
-      {{ end }}
+    <div class="sm:col-span-3 resume-content">{{ .Content }}</div>
+    <div class="sm:col-span-1 side order-first sm:order-last"> 
+        {{ if .Params.contacts_show }}
+        <h2>Contacts</h2>
+        <dl class="grid grid-cols-3">
+          {{ if .Params.contacts_email }}
+          <dt>mail</dt>
+          <dd class="col-span-2"><a href="mailto:{{ .Params.contacts_email }}">
+            {{ .Params.contacts_email }}</a></dd>
+          {{ end }} {{ if .Params.contacts_phone }}
     
+          <dt>tel</dt>
+          <dd class="col-span-2"><a href="tel:{{ .Params.contacts_phone }}">{{ .Params.contacts_phone }}</a></dd>
+          {{ end }} 
+          {{ if .Params.contacts_city }}
+          <dt>city</dt>
+          <dd class="col-span-2">{{ .Params.contacts_city }}</dd>
+          {{ end }}
+        </dl>
+        {{ end }}
+      
 
 
-    {{ if .Params.stack }}
-    <h2>Tech stack</h2>
-    <ul>
-      {{ range $tech := .Params.stack }}
-      <li>{{ $tech }}</li>
+      {{ if .Params.stack }}
+      <h2>Tech stack</h2>
+      <ul>
+        {{ range $tech := .Params.stack }}
+        <li>{{ $tech }}</li>
+        {{ end }}
+      </ul>
       {{ end }}
-    </ul>
-    {{ end }}
-    <div>
-    <h2>Education</h2>
-    <div>Magistr of applied mathematics and physics At The Moscow Institute of Physics and Technology</div>
+
     </div>
   </div>
 </div>
