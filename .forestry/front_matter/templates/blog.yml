@@ -30,6 +30,11 @@ fields:
 - type: file
   name: hero
   label: Hero Image
+- name: tags
+  type: tag_list
+  default: []
+  label: Tags
+  description: TAGs
 pages:
 - content/blog-posts/Personal/wysiwyg-ide-for-development.md
 - content/blog-posts/c-typecscript-c-mongoose-node.js.md
