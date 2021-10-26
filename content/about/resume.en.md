@@ -16,17 +16,13 @@ stack:
   - Perl
   - Postgres, mysql
   - Vue.js
+  - Git
   - Docker
 ---
 
 ## Profile
 
-I'm mature T-shaped developer, with high digging skill, i'm interestred to understand systems that i develop in general. I'm not limited by
-Experienced developer, with high digging skill.
-
-I’m interested in products that I develop, in general, not limited by scope of responsibility.
-
-Used to make things, I am responsible for, work.
+I’m mature developer, with high digging skill, I would like to dig problems. I’m responsive, loves to help people. Responsible, the release will be completed. I know how to listen people, Knows how to understand both people and complex systems.
 
 ## Work experience
 

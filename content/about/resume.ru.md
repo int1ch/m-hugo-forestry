@@ -17,6 +17,7 @@ stack:
   - Postgres, mysql
   - Vue.js
   - Docker
+  - Git
 ---
 
 ## О Себе
