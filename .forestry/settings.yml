@@ -15,7 +15,11 @@ sections:
   - blog
 - type: document
   path: content/about/info.md
-  label: Info Page
+  label: About
+- type: document
+  path: content/about/resume.md
+  label: Resume
+  match: "**/*"
 - type: document
   path: content/about/policy.md
   label: Policy
