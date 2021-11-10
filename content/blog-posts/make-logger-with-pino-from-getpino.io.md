@@ -12,19 +12,19 @@ type = "blog"
 
 [https://getpino.io/#/docs/api?id=serializers-object](https://getpino.io/#/docs/api?id=serializers-object "https://getpino.io/#/docs/api?id=serializers-object")
 
-по умолчанию pino умеет дампить нестандартные объекты только для поля err считая что там Error
+по умолчанию pino умеет дампить **нестандартные** объекты только для поля err считая что там Error
 
-причина исключительности:
+причина исключительности обьекта ошибки:
 
     JSON.stringify(new Error) === '{}'
 
 впрочем для дампа обычных объектов иногда надо заморачиваться
 
-при дампе request / response в любом стандартном фрэймворке получиться черезмерная простыня 
+при дампе request / response в любом стандартном фрэймворке получиться черезмерная простыня,
+
+поэтому выставляем сериализаторы, и выводим только нужные поля
 
 [https://github.com/pinojs/pino-std-serializers](https://github.com/pinojs/pino-std-serializers "https://github.com/pinojs/pino-std-serializers")
-
-так что 
 
     import pino from "pino";
     const logger = pino({
