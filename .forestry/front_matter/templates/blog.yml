@@ -46,6 +46,7 @@ pages:
 - content/blog-posts/golang-map.md
 - content/blog-posts/golang-mysql-timezone.md
 - content/blog-posts/jest-useful-expectations.md
+- content/blog-posts/make-logger-with-pino-from-getpino.io.md
 - content/blog-posts/micro-orm.md
 - content/blog-posts/nginx-proxy-pass.md
 - content/blog-posts/npm-packages.md
