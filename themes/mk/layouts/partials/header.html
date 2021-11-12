@@ -23,19 +23,6 @@
   <!-- FONT –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="{{ .Site.BaseURL }}css/fonts.css">
-  
-
-
-  <!--- highlight js -->
-  {{ if .Site.Params.highlight }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}highlight/styles/{{ .Site.Params.highlight }}.css">
-  {{ else }}
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}highlight/styles/dark.css">
-  {{ end }}
-  <script src="{{ .Site.BaseURL }}highlight/highlight.11.3.1.min.js"></script>
-  <script>//hljs.initHighlightingOnLoad();
-  //hljs.initHighlightingOnLoad();
-  </script>
 
   {{ hugo.Generator }}
   

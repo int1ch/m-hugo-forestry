@@ -69,7 +69,67 @@
   .post-content a:hover {
     @apply underline;
   }
-  .post-content code {
-    @apply bg-gray-200 px-2;
+
+  /* second generation of font scale*/
+  .article2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .article2 .highlight code {
+    padding: 0;
+  }
+
+  .article2 h1,
+  .article2 h2,
+  .article2 h3,
+  .article2 h4,
+  .article2 h5,
+  .article2 h6 {
+    /*font-family: "Raleway", sans-serif;*/
+    font-weight: 300;
+    margin: 20px 0 20px;
+  }
+
+  .article2 h1 {
+    font-size: 3.052rem;
+    line-height: 1.1em;
+    margin-top: 28px;
+  }
+  .article2 h2 {
+    font-size: 2.441rem;
+    line-height: 1.1em;
+    margin-top: 24px;
+  }
+  .article2 h3 {
+    font-size: 1.953rem;
+    line-height: 1.1em;
+  }
+  .article2 h4 {
+    font-size: 1.563rem;
+    line-height: 1.1em;
+  }
+  .article2 h5 {
+    font-size: 1.25rem;
+    line-height: 1.1em;
+  }
+  .article2 h6 {
+    font-size: 1rem;
+    line-height: 1.1em;
+  }
+
+  .article2 ul {
+    list-style: disc;
+    padding: 0 0 0 20px;
+  }
+  .article2 p {
+    text-indent: 24px;
+    margin: 20px 0 20px 0;
+  }
+
+  .article2 a,
+  .article2 a:visited {
+    color: #1867c0;
   }
 }
