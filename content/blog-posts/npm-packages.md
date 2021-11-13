@@ -48,6 +48,11 @@ nestJs = модный модульный фрэймворк (пока кажет
 
 [blitz.js](https://blitzjs.com/docs/get-started) React full stack
 
+https server (static)
+
+* [https://parceljs.org/](https://parceljs.org/ "https://parceljs.org/") - http server with no configuration
+* [http-server](https://github.com/http-party/http-server) - static http server
+
 # SQL
 
 knex = query builder with sql schema deployer
