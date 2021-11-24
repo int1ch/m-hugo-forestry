@@ -26,7 +26,7 @@ users in postgress
     sudo vim /etc/postgresql/13/main/pg_hba.conf
     #host    tx_2            tx              0.0.0.0/0               md5
     ## md5 довольно чувствителен
-    :q
+    
     
     sudo systemctl restart postgresql
     sudo systemctl status postgresql
