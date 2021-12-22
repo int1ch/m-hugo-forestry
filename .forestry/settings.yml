@@ -25,13 +25,19 @@ sections:
 - type: document
   path: content/about/resume.glopal.md
   label: Resume Glopal
-  match: "**/*"
 - type: document
   path: content/about/policy.md
   label: Policy
 - type: document
   path: content/data/authors.yaml
   label: Authors List
+- type: directory
+  path: content/resume
+  label: Resumes
+  create: documents
+  match: "**/*"
+  templates:
+  - blog
 - type: heading
   label: Config
 - type: document
