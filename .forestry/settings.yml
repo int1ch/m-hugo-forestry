@@ -37,7 +37,7 @@ sections:
   create: documents
   match: "**/*"
   templates:
-  - blog
+  - resume
 - type: heading
   label: Config
 - type: document
