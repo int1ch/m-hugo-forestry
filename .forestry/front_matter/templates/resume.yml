@@ -17,24 +17,33 @@ fields:
 - type: text
   name: type
   label: type
+  default: resume
 - type: text
   name: developer_name
   label: developer_name
+  default: Mike Nikitin
 - type: text
   name: developer_position
   label: developer_position
+  default: Node.js Developer
 - type: boolean
   name: contacts_show
   label: contacts_show
+  default: true
 - type: text
   name: contacts_city
   label: contacts_city
+  default: Moscow
 - type: text
   name: contacts_email
   label: contacts_email
+  default: mike@mellior.ru
 - type: text
   name: contacts_phone
   label: contacts_phone
+  default: "+79265573110"
 - type: list
   name: stack
   label: stack
+  config:
+    use_select: false
