@@ -1,0 +1,40 @@
+---
+label: Resume
+hide_body: false
+fields:
+- type: text
+  name: author
+  label: author
+- type: datetime
+  name: date
+  label: date
+- type: text
+  name: hero
+  label: hero
+- type: text
+  name: title
+  label: title
+- type: text
+  name: type
+  label: type
+- type: text
+  name: developer_name
+  label: developer_name
+- type: text
+  name: developer_position
+  label: developer_position
+- type: boolean
+  name: contacts_show
+  label: contacts_show
+- type: text
+  name: contacts_city
+  label: contacts_city
+- type: text
+  name: contacts_email
+  label: contacts_email
+- type: text
+  name: contacts_phone
+  label: contacts_phone
+- type: list
+  name: stack
+  label: stack
