@@ -23,11 +23,21 @@ sections:
   path: content/about/resume.ru.md
   label: Resume RU
 - type: document
+  path: content/about/resume.glopal.md
+  label: Resume Glopal
+- type: document
   path: content/about/policy.md
   label: Policy
 - type: document
   path: content/data/authors.yaml
   label: Authors List
+- type: directory
+  path: content/resume
+  label: Resumes
+  create: documents
+  match: "**/*"
+  templates:
+  - resume
 - type: heading
   label: Config
 - type: document
