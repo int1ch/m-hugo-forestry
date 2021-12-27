@@ -8,7 +8,7 @@ date = 2021-12-20T21:00:00Z
 developer_name = "Mike Nikitin"
 developer_position = "Node.js Developer"
 hero = ""
-stack = ["Docker", "Git", "Vue.js", "Postgres, MySQL", "Perl", "Typescript node.js"]
+stack = ["Typescript node.js", "Vue.js", "Postgres, MySQL", "Perl", "Git", "Docker"]
 title = "LaserHub Eng Resume"
 type = ""
 
@@ -17,7 +17,7 @@ type = ""
 
 Being a backend developer, am also interested in the frontend, understanding how projects work from browser to DB.
 
-Most of the experience I gain in Yandex, standing for main portal page. Highloads, DDOSes, urgent releases were included.
+Most of the experience I gain in Yandex, standing for the main portal page. Highloads, DDOSes, urgent releases were included.
 
 ## Work experience
 
