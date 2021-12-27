@@ -8,7 +8,7 @@ date = 2021-12-26T21:00:00Z
 developer_name = "Mike Nikitin"
 developer_position = "Node.js Developer"
 hero = ""
-stack = ["Typescript node.js", "Vue.js", "Postgres, MySQL", "Perl", "Git", "Docker"]
+stack = ["Typescript node.js / Vue.js", "Postgres, MySQL", "Git, Docker"]
 title = "LaserHub Eng Resume"
 type = ""
 
