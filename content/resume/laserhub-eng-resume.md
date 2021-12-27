@@ -23,7 +23,7 @@ Most of the experience I gain in Yandex, standing for the main portal page. High
 
 ### **TradeXFactor startup**
 
-October 2020 — June 2021
+###### October 2020 — June 2021
 
 Full-stack development of MVP: We try to create a platform for sales managers to exchange price lists, and test business processes.
 
@@ -31,7 +31,7 @@ Stack: NuxtJs(vue.js), vuetify, typescript/node.js mongoDB
 
 ### **Yandex** — Senior Software Developer
 
-February 2009 — December 2019
+###### February 2009 — December 2019
 
 #### **Messenger project**
 
