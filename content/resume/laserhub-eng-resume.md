@@ -31,7 +31,7 @@ Stack: NuxtJs(vue.js), vuetify, typescript/node.js mongoDB
 
 ### **Yandex** — Senior Software Developer
 
-###### February 2009 — December 2019
+###### February 2009 — December 2018
 
 #### **Messenger project**
 
