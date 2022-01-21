@@ -1,7 +1,6 @@
 +++
 author = "Mk"
 date = 2022-01-20T21:00:00Z
-draft = true
 hero = ""
 tags = ["javascript"]
 title = "Case sensitive search using localCompare"
