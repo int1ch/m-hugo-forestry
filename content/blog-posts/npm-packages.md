@@ -42,6 +42,8 @@ node-stack-trace
 
 fastify-auth = конвейеры для реализации авторизации, авторизации не включены
 
+[fastify-openapi-glue](https://github.com/seriousme/fastify-openapi-glue/tree/master/lib) = Swagger Open Api schema validation.
+
 expressjs
 
 nestJs = модный модульный фрэймворк (пока кажется очень не стабильным, например ошибки компиляции зависимостей, дезинформируют)
@@ -52,6 +54,9 @@ https server (static)
 
 * [https://parceljs.org/](https://parceljs.org/ "https://parceljs.org/") - http server with no configuration
 * [http-server](https://github.com/http-party/http-server) - static http server
+
+hapi [https://hapi.dev/](https://hapi.dev/plugins "https://hapi.dev/plugins") Сервер, для формирования api? похоже что не справился с ростом: в районе 17-18 версии они сделали перименование hapi => @hapi/hapi которое понятнуло переименование под модулей не все из которых перехали: пример: hapi-swaggered -> c форком [https://github.com/danh20051995/hapi-swagger](https://github.com/danh20051995/hapi-swagger "https://github.com/danh20051995/hapi-swagger")  
+однако форк не отражен в документации.
 
 # SQL
 
@@ -70,6 +75,8 @@ microorm = sql orm, документация непонятнее чем typeorm
 # TESTING
 
 [rewire](https://github.com/jhnns/rewire) - mock non public functions
+
+[nock](https://github.com/nock/nock) - intercept node.js http reuquests (from axios too)
 
 testing frameworks в целом очень плохожи,
 
@@ -125,3 +132,7 @@ CODE Highlighter
 
 * [https://highlightjs.org/](https://highlightjs.org/download/ "https://highlightjs.org/download/")
 * CROMA - [https://github.com/alecthomas/chroma](https://github.com/alecthomas/chroma "https://github.com/alecthomas/chroma"), used in HUGO
+
+## Docker
+
+docker-sync - non npm, increase speed for macosx
