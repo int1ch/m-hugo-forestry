@@ -68,6 +68,7 @@ pages:
 - content/blog-posts/typescript-reference.md
 - content/blog-posts/typescript-typed-get-set.md
 - content/blog-posts/typescript-types.md
+- content/blog-posts/typescript-webpack...chunks-sentry.md
 - content/blog-posts/vpn.md
 - content/blog-posts/vue-child-to-parent-communication.md
 - content/blog-posts/vue-make-property-reactive.md
