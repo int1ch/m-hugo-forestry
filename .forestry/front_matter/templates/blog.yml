@@ -59,6 +59,7 @@ pages:
 - content/blog-posts/run-typescript-with-modules-as-script.md
 - content/blog-posts/saint-frontend.md
 - content/blog-posts/ssh-agent.md
+- content/blog-posts/testing-exceptions-on-promises.md
 - content/blog-posts/tuya-interception.md
 - content/blog-posts/typeorm-find.md
 - content/blog-posts/typeorm-postgress-fileds-name.md
