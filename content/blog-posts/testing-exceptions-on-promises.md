@@ -3,7 +3,7 @@ author = "Mk"
 date = ""
 draft = true
 hero = ""
-tags = []
+tags = ["test", "typescript"]
 title = "Testing exceptions on promises"
 type = "blog"
 
