@@ -55,6 +55,7 @@ pages:
 - content/blog-posts/nuxt.js-axios-cookbook.md
 - content/blog-posts/nuxt.js-typescript-for-serverside.md
 - content/blog-posts/postgress.md
+- content/blog-posts/python-of-specified-version-in-virtualenv.md
 - content/blog-posts/raspbery-pi-as-a-router.md
 - content/blog-posts/run-typescript-with-modules-as-script.md
 - content/blog-posts/saint-frontend.md
