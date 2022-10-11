@@ -40,6 +40,7 @@ pages:
 - content/blog-posts/Personal/wysiwyg-ide-for-development.md
 - content/blog-posts/c-typecscript-c-mongoose-node.js.md
 - content/blog-posts/case-sensitive-search-using-localcompare.md
+- content/blog-posts/clean-architecture.md
 - content/blog-posts/eng-complete-guide-for-typescript-with-mongoose-for-node.js.md
 - content/blog-posts/esp8266-based-boards-cache.md
 - content/blog-posts/flexbox.md
